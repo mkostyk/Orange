@@ -1,15 +1,23 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// Class representing a calendar.
 public class Calendar {
     private final WorkingHours working_hours;
     private final Meeting[] planned_meeting;
 
+    // Empty constructor for JSON deserialization.
+    public Calendar() {
+        working_hours = new WorkingHours("", "");
+        planned_meeting = new Meeting[0];
+    }
+    
     public Calendar(WorkingHours wh, Meeting[] pm) {
         working_hours = wh;
         planned_meeting = pm;
     }
 
+    // Flattens the calendar into a list of events.
     public ArrayList<Event> flatten() {
        ArrayList<Event> events = new ArrayList<>();
 

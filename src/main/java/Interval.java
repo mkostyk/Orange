@@ -1,3 +1,4 @@
+// Class representing some time interval.
 public class Interval {
     protected final String start;
     protected final String end;
