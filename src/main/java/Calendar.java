@@ -11,7 +11,7 @@ public class Calendar {
         working_hours = new WorkingHours("", "");
         planned_meeting = new Meeting[0];
     }
-    
+
     public Calendar(WorkingHours wh, Meeting[] pm) {
         working_hours = wh;
         planned_meeting = pm;
